@@ -45,7 +45,7 @@ public class Score : MonoBehaviour
     public void AddScore(int add)
     {
         m_Score += add;
-        m_UIText.text = "" + m_Score;
+        m_UIText.text = "Score: " + m_Score;
     }
     #endregion
 }

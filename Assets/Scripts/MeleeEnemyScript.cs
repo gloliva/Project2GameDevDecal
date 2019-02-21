@@ -133,6 +133,7 @@ public class MeleeEnemyScript : MonoBehaviour
         yield return new WaitForSeconds(hitboxTiming);
 
         Debug.Log("Cast hitbox now");
+        FindObjectOfType<AudioManager>().Play("Slash");
 
         // Create hitbox
         RaycastHit2D[] hits = Physics2D.BoxCastAll(rb.position + Vector2.left, Vector2.one, 0f, Vector2.zero, 0);
@@ -163,11 +164,16 @@ public class MeleeEnemyScript : MonoBehaviour
         {
             FindObjectOfType<Score>().AddScore(20);
             Die();
+        } else
+        {
+            FindObjectOfType<AudioManager>().Play("Orc1");
         }
+
     }
 
     private void Die()
     {
+        FindObjectOfType<AudioManager>().Play("Explosion2");
         Destroy(this.gameObject);
     }
     #endregion

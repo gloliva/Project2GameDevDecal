@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     float xAxis;
     float yAxis;
+    public GameObject retryButton;
 
     #region health_variables
     public float maxHealth;
@@ -34,6 +35,8 @@ public class PlayerController : MonoBehaviour
         healthBar.UpdateBar(currHealth, maxHealth);
 
         specialAvailable = false;
+
+        retryButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
             GameObject missile = (GameObject)Instantiate(projectile, transform.position, transform.rotation);
             missile.GetComponent<Rigidbody2D>().velocity = FireDirection;
             missile.GetComponent<MissileScript>().SetDamage(damage);
+            FindObjectOfType<AudioManager>().Play("Missile");
 
             Destroy(missile, 5);
         }
@@ -108,6 +112,8 @@ public class PlayerController : MonoBehaviour
             missile5.GetComponent<Rigidbody2D>().velocity = FireDirection;
             missile5.GetComponent<MissileScript>().SetDamage(damage);
 
+            FindObjectOfType<AudioManager>().Play("Missile");
+
             Destroy(missile1, 5);
             Destroy(missile2, 5);
             Destroy(missile3, 5);
@@ -128,8 +134,11 @@ public class PlayerController : MonoBehaviour
             if (FindObjectOfType<Score>().m_Score > FindObjectOfType<Highscore>().m_Score)
             {
                 FindObjectOfType<Highscore>().SetScore(FindObjectOfType<Score>().m_Score);
+                Data.highscore = FindObjectOfType<Highscore>().m_Score;
             }
             Die();
+            retryButton.SetActive(true);
+            
         }
     }
 

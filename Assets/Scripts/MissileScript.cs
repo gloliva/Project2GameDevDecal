@@ -40,6 +40,7 @@ public class MissileScript : MonoBehaviour
         {
             Instantiate(explosionObj, coll.gameObject.transform.position, coll.gameObject.transform.rotation);
             Destroy(obj);
+            FindObjectOfType<AudioManager>().Play("Fire");
             currHealth -= 1;
             if (currHealth <= 0)
             {

@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &503118809357058712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503118809357058694}
+  - component: {fileID: 503118809357058695}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503118809357058694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503118809357058712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &503118809357058695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503118809357058712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb91336737c1e5f40bd573688b99161d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Missile
+    group: SFX
+    clip: {fileID: 8300000, guid: 9a638a572050c2347bbafd2c8c3a4813, type: 3}
+    source: {fileID: 0}
+  - name: Fire
+    group: SFX
+    clip: {fileID: 8300000, guid: 9c98191cb586858428c5dfabb544d794, type: 3}
+    source: {fileID: 0}
+  - name: Explosion1
+    group: SFX
+    clip: {fileID: 8300000, guid: d20e9575d22ce9f4e9b7755a815e720f, type: 3}
+    source: {fileID: 0}
+  - name: Explosion2
+    group: SFX
+    clip: {fileID: 8300000, guid: 6c96947b4074f704fbb7dc6554b10cd6, type: 3}
+    source: {fileID: 0}
+  - name: Orc1
+    group: SFX
+    clip: {fileID: 8300000, guid: d45da3dede26b6742ae74b18aeed6949, type: 3}
+    source: {fileID: 0}
+  - name: Orc2
+    group: SFX
+    clip: {fileID: 8300000, guid: 987353d745febe14e810e1c2871bcf8a, type: 3}
+    source: {fileID: 0}
+  - name: Slash
+    group: SFX
+    clip: {fileID: 8300000, guid: 5f323cf704cd7a24ea29056ce36e1627, type: 3}
+    source: {fileID: 0}
+  musicGroup: {fileID: 243998503013657228, guid: 12338df0bcacd654e9a89bd0d51ea5ef,
+    type: 2}
+  sfxGroup: {fileID: 243729444503017978, guid: 12338df0bcacd654e9a89bd0d51ea5ef, type: 2}
+  foleyGroup: {fileID: 243764506112553222, guid: 12338df0bcacd654e9a89bd0d51ea5ef,
+    type: 2}

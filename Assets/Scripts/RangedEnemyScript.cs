@@ -97,11 +97,15 @@ public class RangedEnemyScript : MonoBehaviour
         {
             FindObjectOfType<Score>().AddScore(10);
             Die();
+        } else
+        {
+            FindObjectOfType<AudioManager>().Play("Orc2");
         }
     }
 
     private void Die()
     {
+        FindObjectOfType<AudioManager>().Play("Explosion2");
         Destroy(this.gameObject);
     }
 

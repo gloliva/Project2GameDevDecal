@@ -11,7 +11,7 @@ public class Fireball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        transform.Rotate(new Vector3(0, 0, 90));
     }
 
     // Update is called once per frame
@@ -28,6 +28,7 @@ public class Fireball : MonoBehaviour
         {
             coll.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
             Instantiate(explosionObj, coll.gameObject.transform.position, coll.gameObject.transform.rotation);
+            FindObjectOfType<AudioManager>().Play("Explosion1");
             Destroy(gameObject);
         }
 

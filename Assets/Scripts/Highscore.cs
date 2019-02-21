@@ -29,7 +29,7 @@ public class Highscore : MonoBehaviour
 
     public void Start()
     {
-        m_Score = 0;
+        m_Score = Data.highscore;
         SetScore(0);
     }
     #endregion
